@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: busybox-deployment
+  name: nginx-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: busybox-deployment
+      app: nginx-deployment
   template:
     metadata:
       labels:
-        app: busybox-deployment
+        app: nginx-deployment
     spec:
       containers:
-      - name: busybox
-        image: busybox:1.35.0
+      - name: nginx
+        image: nginx:1.22.0
         ports:
         - name: http
-          containerPort: 8080
+          containerPort: 80
           protocol: TCP
