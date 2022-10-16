@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: busybox
-        image: busybox:1.35.0
+        image: busybox:latest
         ports:
         - name: http
           containerPort: 8080
