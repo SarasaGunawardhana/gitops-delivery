@@ -3,7 +3,7 @@ kind: HorizontalPodAutoscaler
 metadata:
   name: nginx-deployment-hpa
 spec:
-  minReplicas: 1
+  minReplicas: 2
   maxReplicas: 3
   metrics:
   - type: Resource
